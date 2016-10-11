@@ -22,19 +22,19 @@ class Aborts(TestCase):
 class GoodCapture(TestCase):
 
     def test_fail_weird(self):
-        self.assertFalse(entrance.claims_conversation("kittens")
+        self.assertFalse(entrance.claims_conversation("kittens"))
 
     def test_fail_empty(self):
-        self.assertFalse(entrance.claims_conversation("")
+        self.assertFalse(entrance.claims_conversation(""))
 
     def test_fail_not_overreaching(self):
-        self.assertFalse(entrance.claims_conversation("extraprivacy informatics")
+        self.assertFalse(entrance.claims_conversation("extraprivacy informatics"))
 
     def test_very_short(self):
-        self.assertTrue(entrance.claims_conversation("privacyinfo")
+        self.assertTrue(entrance.claims_conversation("privacyinfo"))
 
     def test_short(self):
-        self.assertTrue(entrance.claims_conversation("privacy info")
+        self.assertTrue(entrance.claims_conversation("privacy info"))
 
     def test_long(self):
         self.assertTrue(entrance.claims_conversation("I want privacy information please"))
