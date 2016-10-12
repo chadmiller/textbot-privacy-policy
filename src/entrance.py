@@ -15,7 +15,7 @@ def help():
     the canonical keyword that would claim a conversation, and then dashes and
     a little pitch for using it. Phrase as: 
     "keyword" -- what I can do for you."""
-    return [ '''"{0}" -- learn how we treat your personal data'''.format(common_name()) ]
+    return [ '''"{0}" -- tell you how we treat your personal data'''.format(common_name()) ]
 
 # required
 def claims_conversation(message):
